@@ -1,10 +1,137 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>webflakes</title>
-</head>
-<body>
-    <h1 align="center" style="font-family: sans-serif; color: black;">Welcome to Webflakes!</h1>
-    <p align="center">This is where i do Web Projects/Experiments. Down there are the links to my projects (they will come in webpages)</p>
-    <a href="https://bluepanda.qzz.io">Diary of my Projects (non webpage)</a>
-    <a href="/random-number-generator">Random Number Generator</a>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <title>webflakes -- main page</title>
+
+    <main>
+        <div class="row profile">
+
+            <!-- LEFT SIDEBAR -->
+            <div class="col left">
+
+                <h1>schyflakes</h1>
+
+                <div class="general-about">
+                    <div class="profile-pic">
+                        <img src="{{url_for('static', filename='images/pfp.webp')}}" alt="profile picture"></img>
+                    </div>
+
+                    <div class="details">
+                        <p>Mood:</p>
+                        <p>debugging CSS at 11pm</p>
+                    </div>
+                </div>
+
+                <div class="contact">
+                    <div class="heading">
+                        <h4>Contacting schyflakes</h4>
+                    </div>
+
+                    <div class="inner">
+                        <p>facebook messenger: Schy Flakes</p>
+                        <p>discord: flakes511</p>
+                        <p>email: schyflakes@webflakes.qzz.io</p>
+                    </div>
+                </div>
+
+                <div class="table-section">
+                    <div class="heading">
+                        <h4>Interests</h4>
+                    </div>
+
+                    <div class="inner">
+                        <p>
+                            I like Programming and i make some music! (i dont really know my scales... haha :3) i code
+                            in Python and in C, im not an expert at C but im good in Python! I also do Web Development 
+                            like this website (most of the code are yanked from Spacehey or Chatgpt but everything else is me!)
+                            i dont really do Html or Css but i know some because of Linux Ricing, Whats Linux ricing you might ask?
+                            Its a thing in the Linux community where you customize your Linux Distro (I use arch btw) anyways this website
+                            took me 2 days to make so i hope you like the 2000s esq vibe it gives!
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- RIGHT CONTENT -->
+            <div class="col right">
+
+                <div class="blurbs">
+                    <div class="heading">
+                        <h4>About Me</h4>
+                        <style>
+                            @keyframes spin{
+                            from{ transform:rotate(0deg); }
+                            to{ transform:rotate(-360deg); }
+                            }
+                            .general-about .profile-pic img{
+                            border-radius: 50%;
+                            animation: spin 7s infinite linear;
+                            }
+                            </style>
+                    </div>
+                    <div class="inner">
+                        <p>
+                            hello :3 welcome to my weird internet corner! I dont really do stuff like this,
+                            its more like copy code copy code... Hello! my name is schyflakes and i program
+                            AIs and games (kind of) im Pan and i also like Video Games! i play Deltarune and Undertale,
+                            Oneshot, and other great indie games! i come from the Philippines but i live in Germany now
+                            You can find me on Discord or Facebook messenger and you can email me!
+                        </p>
+                        <img src="{{url_for('static', filename='images/flat.gif')}}"></img><img src="{{url_for('static', filename='images/k.gif')}}"></img>
+                        <p>
+                            welp, what now? is there anything to add here? oh yea wait fav song
+                            I like Vocaloid, whats vocaloid? vocaloid is a computer program that allows you to synthesize 
+                            voices to different notes, one of their voicebanks is Hatsune miku! you might know her! 
+                            shes everywhere in the 2000s! anyways the song below is triple baka 
+                        </p>
+                        <audio controls true autoplay false src="{{ url_for('static', filename='images/videoplayback.mp3') }}"></audio>
+                    </div>
+                </div>
+                <div class="friends">
+                    <div class="heading">
+                        <h4>Friends</h4>
+                    </div>
+                    <div class="inner friends-grid">
+                        All of my friends are just my old classmates hehe :3
+                        <div class="person">
+                            <a href="https://m.facebook.com/jc.delosreyes.9216/">JC</a>
+                        </div>
+
+                        <div class="person">
+                            <a href="https://m.facebook.com/GrowAAngelo/">Kryztoff</a>
+                        </div>
+
+                        <div class="person">
+                            <p>Reigha/buff monika (no link sorry)</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="friends">
+                    <div class="heading">
+                        <h4>Web Projects</h4>
+                    </div>
+
+                    <div class="inner">
+                        <a href="/random-number-generator">Random Number Generator</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+</div>
+
+
 </body>
+</html>

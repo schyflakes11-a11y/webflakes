@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import *
 import random
 app = Flask(__name__)
 @app.route("/")
@@ -10,6 +10,5 @@ def rannum():
     if request.method == "POST":
         number = random.randint(1, 100)
     return render_template("randomnumbergenerator.html", number=number)
-        
 if __name__ == "__main__":
     app.run()
